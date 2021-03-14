@@ -7,7 +7,7 @@ import (
 )
 
 // FindGo is a function looking throu the go-file, specified by fileName, and a function name (funcName)
-// It's aim is to find a function -funcName- and to count all the "go" statements inside.
+// It's aim is to find a function -funcName- and to count all the "go" statements inside of it.
 func FindInGo(fileName, funcName string) (int, error) {
 	fset := token.NewFileSet()
 	fileAST, err := parser.ParseFile(fset, fileName, nil, 0)
